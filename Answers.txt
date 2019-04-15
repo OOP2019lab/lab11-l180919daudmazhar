@@ -1,0 +1,16 @@
+Exercise 6
+(a) Age can be accessed by functions of the derived class in order to modify age later on, whenever needed. However, private members like names are not displayed directly to any function.
+
+(b)The errors:
+
+Error	2	error C2248: 'Person::firstname' : cannot access private member declared in class 'Person'	c:\users\temp.domain.001\documents\visual studio 2012\projects\l180919 lab 11\l180919 lab 11\student.cpp	25
+Error	3	error C2248: 'Person::lastname' : cannot access private member declared in class 'Person'	c:\users\temp.domain.001\documents\visual studio 2012\projects\l180919 lab 11\l180919 lab 11\student.cpp	25
+
+(c)Reason:
+
+We get this error because the firstname and lastname are private members of the class "Person.h". During inheritance, these variables stay hidden which is why they are inaccessible by the derived class.
+
+EFFECTS OF EXERCISE 8 & 9
+
+There was no effect for the given main because for the implementation of classes Student.h and Faculty.h did not directly access any hiddent (private) members of the Parent class, i.e. Person.h
+Even in the print function, we made use of its public PrintInfo function to print the private members of Person.h.  
